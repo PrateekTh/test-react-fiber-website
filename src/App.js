@@ -19,8 +19,11 @@ function App() {
   return (
     <>
       <Canvas colorManagement>
-        <ambientLight intensity={.3} /> 
-        <pointLight args={[1,1,1]} />
+        <ambientLight intensity={0.3} /> 
+
+        <pointLight position={[-10, 0, -20]} intensity={0.5} />
+        <pointLight position={[0, -10, 0]} intensity={1.5} />
+
         <Box position={[0,0,0]} args={[3,2,1]} color='lightblue'/>
         <Box position={[3,1,0]} args={[1,1,1]} color='pink'/>
         <Box position={[-3,0,0]} args={[2,2,1]}color='#55E5BB'/>
