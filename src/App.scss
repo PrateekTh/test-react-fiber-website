@@ -2,6 +2,35 @@
   box-sizing: border-box;
 }
 
+.main-head{
+  font-family: 'Major Mono Display', monospace;
+  font-size: 5vh;
+  padding-right: 7vh;
+  color: #E4FDE1 !important;
+}
+
+.header-container{
+  background-color: black;
+  padding: 0 !important;
+  margin: 0;
+}
+
+input, textarea {
+  font-family: 'Inconsolata', Roboto Mono, monospace;
+  background-color: #E4FDE1 !important;
+  margin-left: 2vh;
+  margin-right: 2vh;
+}
+
+
+.nav-link{
+  font-size: 3vh;
+  color: #E4FDE1 !important;
+  border: 1px #E4FDE1 solid;
+  padding-left: 1.5vw !important;
+  padding-right: 1.5vw !important;
+}
+
 html, body,
 #root{
   width:100%;

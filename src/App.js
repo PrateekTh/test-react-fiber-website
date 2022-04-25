@@ -2,6 +2,7 @@ import React, {useRef} from "react";
 import './App.scss';
 
 import {Canvas, useFrame} from 'react-three-fiber'
+import Header from "./Header";
 
 const Box = ({position, args, color}) => {
   const mesh = useRef(null);
@@ -14,10 +15,10 @@ const Box = ({position, args, color}) => {
   )
 }
 
-
 function App() {
   return (
     <>
+      <Header/>
       <Canvas colorManagement>
         <ambientLight intensity={0.3} /> 
 
