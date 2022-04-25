@@ -1,6 +1,7 @@
 import React, {useRef} from "react";
 import './App.scss';
 
+import { OrbitControls } from "@react-three/drei";
 import {Canvas, useFrame} from 'react-three-fiber'
 import Header from "./Header";
 
@@ -28,6 +29,7 @@ function App() {
         <Box position={[0,0,0]} args={[3,2,1]} color='lightblue'/>
         <Box position={[3,1,0]} args={[1,1,1]} color='pink'/>
         <Box position={[-3,0,0]} args={[2,2,1]}color='#55E5BB'/>
+        <OrbitControls/>
       </Canvas>
     </>
   );
