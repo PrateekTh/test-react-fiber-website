@@ -5,6 +5,9 @@ import { OrbitControls } from "@react-three/drei";
 import {Canvas, useFrame} from 'react-three-fiber'
 import Header from "./Header";
 
+import { useLoader } from '@react-three/fiber'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+
 const Box = ({position, args, color}) => {
   const mesh = useRef(null);
   useFrame(()=>(mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
