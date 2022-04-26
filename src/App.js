@@ -5,8 +5,21 @@ import { OrbitControls } from "@react-three/drei";
 import {Canvas, useFrame} from 'react-three-fiber'
 import Header from "./Header";
 
-import Model from "./components/axe";
 
+import { Suspense } from "react";
+import { useLoader } from '@react-three/fiber'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+
+
+
+const Model = () => {
+  const gltf = useLoader(GLTFLoader, "../public/car.gltf")
+  return (
+      <>
+          <primitive position={[30, 30, 30]} object={gltf.scene} scale={1} />
+      </>
+  );
+};
 
 const Box = ({position, args, color}) => {
   const mesh = useRef(null);
@@ -23,8 +36,11 @@ function App() {
   return (
     <>
       <Header/>
-      <Model/>
+      
       <Canvas colorManagement>
+      <Suspense>
+        <Model/>
+      </Suspense>
         <ambientLight intensity={0.3} /> 
 
         <pointLight position={[-10, 0, -20]} intensity={0.5} />
