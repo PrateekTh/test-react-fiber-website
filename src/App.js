@@ -5,8 +5,8 @@ import { OrbitControls } from "@react-three/drei";
 import {Canvas, useFrame} from 'react-three-fiber'
 import Header from "./Header";
 
-import { useLoader } from '@react-three/fiber'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import Model from "./components/axe";
+
 
 const Box = ({position, args, color}) => {
   const mesh = useRef(null);
@@ -23,6 +23,7 @@ function App() {
   return (
     <>
       <Header/>
+      <Model/>
       <Canvas colorManagement>
         <ambientLight intensity={0.3} /> 
 
